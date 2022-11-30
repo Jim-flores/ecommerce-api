@@ -23,6 +23,10 @@ const Product = db.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING,
+      field: "image",
+    },
     status: {
       type: DataTypes.BOOLEAN,
     },

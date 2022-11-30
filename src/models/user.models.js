@@ -1,5 +1,7 @@
 const db = require("../utils/database");
 
+const bcrypt = require("bcrypt");
+
 const { DataTypes } = require("sequelize");
 
 const User = db.define(
@@ -29,6 +31,13 @@ const User = db.define(
     },
   },
   {
+    hooks: {
+      beforeCreate: (user, options) => {
+        const { password } = user;
+        const hash = bcrypt.hashSync(password, 8);
+        user.password = hash;
+      },
+    },
     timestamps: false,
   }
 );

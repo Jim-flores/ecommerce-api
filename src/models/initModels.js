@@ -6,7 +6,7 @@ const ProductInOrder = require("./productInOrder.models");
 const User = require("./user.models");
 
 const initModels = () => {
-  User.hasOne(Product, {
+  User.hasMany(Product, {
     foreignKey: {
       name: "user_id",
       allowNull: false,
