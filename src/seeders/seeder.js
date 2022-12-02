@@ -6,7 +6,7 @@ const Product = require("../models/product.models");
 initModels();
 
 const users = [
-  { user_name: "Ian Rosas", email: "ian@gmail.com", password: "1234" },
+  { user_name: "Jim", email: "j1mer0528@gmail.com", password: "1234" },
   { user_name: "Alvis Echeverria", email: "alvis@gmail.com", password: "1234" },
   { user_name: "Carlos Tineo", email: "carlos@gmail.com", password: "1234" },
 ];

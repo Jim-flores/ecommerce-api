@@ -2,6 +2,21 @@ const db = require("../utils/database");
 
 const { DataTypes } = require("sequelize");
 
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     cart:
+ *       type: object
+ *       properties:
+ *         total_price:
+ *           type: string
+ *           example: Tv
+ *         status:
+ *           type: string
+ *           example: "awaiting"
+ */
+
 const Cart = db.define(
   "cart",
   {

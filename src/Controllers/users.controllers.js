@@ -1,4 +1,6 @@
 const UserServices = require("../Services/users.services");
+const transporter = require("../utils/mailer");
+const welcomeTemplate = require("../templates/welcome");
 
 const getAllUsers = async (req, res, next) => {
   try {
@@ -15,6 +17,13 @@ const createUser = async (req, res, next) => {
     console.log(newUser);
     const result = await UserServices.add(newUser);
     res.status(201).json(result);
+    transporter.sendMail({
+      from: "<ian.rosas@academlo.com>",
+      to: result.email,
+      subject: "Bienvenido a la tienda Ecommerce",
+      text: `Hola ${result.user_name} Bienvenido a mi Api Ecommerce`,
+      html: welcomeTemplate(result.user_name),
+    });
   } catch (error) {
     next({
       status: 418,
