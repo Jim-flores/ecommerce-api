@@ -7,7 +7,7 @@
     "seed": "node ./src/seeders/seeder.js",
     "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose --detectOpenHandles --silent"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +26,9 @@
     "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
+    "jest": "^29.3.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.1"
   }
 }

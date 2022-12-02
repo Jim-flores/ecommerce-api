@@ -56,3 +56,4 @@ app.listen(
   () => console.log(`Server started at port ${PORT}`),
   swaggerDocs(app, PORT)
 );
+module.exports = app;

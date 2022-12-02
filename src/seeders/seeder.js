@@ -35,7 +35,7 @@ const products = [
     price: "300",
     availableQty: 5,
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRlUTSbRTlTUFNfP-dA9A2fbJ3443riALhoV5B9EMp-fv-ji_FAbQutGj4ll1pMO1khSY&usqp=CAU",
+      "https://assets.xboxservices.com/assets/ef/9e/ef9e8f9f-4141-409c-9bab-659102bcc6b2.jpg?n=XSX_Page-Hero-0_768x1434.jpg",
     user_id: 3,
     status: "awaiting",
   },
