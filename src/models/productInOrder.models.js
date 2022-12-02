@@ -18,7 +18,8 @@ const ProductInOrder = db.define(
       type: DataTypes.DECIMAL,
     },
     status: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.ENUM("awaiting", "purchased"),
+      defaultValue: "awaiting",
     },
   },
   {

@@ -11,8 +11,12 @@ const Order = db.define(
       autoIncrement: true,
       allowNull: false,
     },
+    total_price: {
+      type: DataTypes.DECIMAL,
+    },
     status: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.ENUM("awaiting", "purchased"),
+      defaultValue: "awaiting",
     },
   },
   {

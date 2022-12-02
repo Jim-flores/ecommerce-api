@@ -14,6 +14,10 @@ const Cart = db.define(
     total_price: {
       type: DataTypes.DECIMAL,
     },
+    status: {
+      type: DataTypes.ENUM("awaiting", "purchased"),
+      defaultValue: "awaiting",
+    },
   },
   {
     timestamps: false,

@@ -33,13 +33,13 @@ const initModels = () => {
   Cart.hasMany(ProductInCart, {
     foreignKey: {
       name: "cart_id",
-      allowNull: false,
+      allowNull: true,
     },
   });
   ProductInCart.belongsTo(Cart, {
     foreignKey: {
       name: "cart_id",
-      allowNull: false,
+      allowNull: true,
     },
   });
   Product.hasOne(ProductInOrder, {

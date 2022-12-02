@@ -28,7 +28,8 @@ const Product = db.define(
       field: "image",
     },
     status: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.ENUM("awaiting", "purchased"),
+      defaultValue: "awaiting",
     },
   },
   {
